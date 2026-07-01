@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflection — ENG 1044 Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.reflection-box {
+  width: 100%;
+  min-height: 220px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  padding: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  resize: vertical;
+  background: var(--paper);
+  color: var(--ink);
+  display: block;
+  margin-top: 0.5rem;
+}
+.reflection-box:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.word-count { font-family: var(--font-mono); font-size: 0.8rem; color: var(--slate); margin: 0.4rem 0 0; }
+.word-count.over { color: var(--warn); font-weight: 600; }
+</style>
+<script>window.CURRENT_PAGE='reflection'; window.CURRENT_PATH='portfolio/i-reflection.html';</script>
+</head>
+<body>
+<div id="topbar-mount"></div>
+<div id="nav-mount"></div>
+<main>
+
+  <section class="page-header">
+    <div class="eyebrow"><span class="letter-badge">i</span> Reflection</div>
+    <h1>Self &amp; Peer-Review Reflections</h1>
+    <p class="lede">Each student writes their own self-reflection and peer-review on the PBL experience. Maximum 500 words. Language mechanics are assessed here individually.</p>
+  </section>
+
+  <div class="edit-note"><strong>EDIT ME:</strong> One card per group member. Type directly into the text area — the live word counter updates as you type. Delete the 4th card if your group only has 3 members.</div>
+
+  <!-- Member 1 -->
+  <div class="card">
+    <h3>[ Student Name 1 ] <span class="chip pending">Not started</span></h3>
+    <label for="ref1" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--slate);">Self-reflection &amp; peer-review (max 500 words)</label>
+    <textarea id="ref1" class="reflection-box" placeholder="Write this member's self-reflection and peer-review here..." oninput="countWords(this)"></textarea>
+    <p class="word-count">0 / 500 words</p>
+  </div>
+
+  <!-- Member 2 -->
+  <div class="card">
+    <h3>[ Student Name 2 ] <span class="chip pending">Not started</span></h3>
+    <label for="ref2" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--slate);">Self-reflection &amp; peer-review (max 500 words)</label>
+    <textarea id="ref2" class="reflection-box" placeholder="Write this member's self-reflection and peer-review here..." oninput="countWords(this)"></textarea>
+    <p class="word-count">0 / 500 words</p>
+  </div>
+
+  <!-- Member 3 -->
+  <div class="card">
+    <h3>[ Student Name 3 ] <span class="chip pending">Not started</span></h3>
+    <label for="ref3" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--slate);">Self-reflection &amp; peer-review (max 500 words)</label>
+    <textarea id="ref3" class="reflection-box" placeholder="Write this member's self-reflection and peer-review here..." oninput="countWords(this)"></textarea>
+    <p class="word-count">0 / 500 words</p>
+  </div>
+
+  <!-- Member 4 — delete this card if group has only 3 members -->
+  <div class="card">
+    <h3>[ Student Name 4 ] <span class="chip pending">Not started</span></h3>
+    <label for="ref4" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--slate);">Self-reflection &amp; peer-review (max 500 words)</label>
+    <textarea id="ref4" class="reflection-box" placeholder="Write this member's self-reflection and peer-review here..." oninput="countWords(this)"></textarea>
+    <p class="word-count">0 / 500 words</p>
+  </div>
+
+  <a class="btn outline" href="index.html">← Back to Home</a>
+
+</main>
+<footer class="sitefoot">portfolio / i-reflection.html — ENG 1044 Research Project Course Portfolio</footer>
+<script>
+function countWords(el) {
+  var words = el.value.trim() ? el.value.trim().split(/\s+/).length : 0;
+  var counter = el.nextElementSibling;
+  counter.textContent = words + ' / 500 words';
+  if (words > 500) { counter.classList.add('over'); } else { counter.classList.remove('over'); }
+}
+</script>
+<script src="nav.js"></script>
+</body>
+</html>
