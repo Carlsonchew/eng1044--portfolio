@@ -5,27 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reflection — ENG 1044 Portfolio</title>
 <link rel="stylesheet" href="styles.css">
-<style>
-.reflection-box {
-  width: 100%;
-  min-height: 220px;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.65;
-  padding: 0.9rem;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  resize: vertical;
-  background: var(--paper);
-  color: var(--ink);
-  display: block;
-  margin-top: 0.5rem;
-}
-.reflection-box:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
-.word-count { font-family: var(--font-mono); font-size: 0.8rem; color: var(--slate); margin: 0.4rem 0 0; }
-.word-count.over { color: var(--warn); font-weight: 600; }
-</style>
 <script>window.CURRENT_PAGE='reflection'; window.CURRENT_PATH='portfolio/i-reflection.html';</script>
+<style>
+  .response-card { padding: 0; overflow: hidden; }
+  .response-card summary { list-style: none; cursor: pointer; padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .response-card summary::-webkit-details-marker { display: none; }
+  .response-card summary .rc-title { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; }
+  .response-card summary .rc-arrow { font-family: var(--font-mono); font-size: 0.8rem; color: var(--slate); transition: transform 0.15s ease; }
+  .response-card[open] summary .rc-arrow { transform: rotate(90deg); }
+  .response-card .rc-body { padding: 0 1.5rem 1.5rem; border-top: 1px solid var(--line); }
+  .response-card .rc-body p { margin: 0 0 1rem; line-height: 1.65; }
+</style>
 </head>
 <body>
 <div id="topbar-mount"></div>
@@ -35,55 +25,57 @@
   <section class="page-header">
     <div class="eyebrow"><span class="letter-badge">i</span> Reflection</div>
     <h1>Self &amp; Peer-Review Reflections</h1>
-    <p class="lede">Each student writes their own self-reflection and peer-review on the PBL experience. Maximum 500 words. Language mechanics are assessed here individually.</p>
+    <p class="lede">Each student writes their own self-reflection and peer-review on the PBL experience. Maximum 500 words. Language mechanics are assessed here individually. Click a name to expand their reflection.</p>
   </section>
 
-  <div class="edit-note"><strong>EDIT ME:</strong> One card per group member. Type directly into the text area — the live word counter updates as you type. Delete the 4th card if your group only has 3 members.</div>
-
   <!-- Member 1 -->
-  <div class="card">
-    <h3>[ Student Name 1 ] <span class="chip pending">Not started</span></h3>
-    <label for="ref1" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--slate);">Self-reflection &amp; peer-review (max 500 words)</label>
-    <textarea id="ref1" class="reflection-box" placeholder="Write this member's self-reflection and peer-review here..." oninput="countWords(this)"></textarea>
-    <p class="word-count">0 / 500 words</p>
-  </div>
+  <details class="card response-card">
+    <summary>
+      <span class="rc-title">Alex Yeo Wei Onn <span class="chip done">Completed</span></span>
+      <span class="rc-arrow">▶</span>
+    </summary>
+    <div class="rc-body">
+      <div class="tag-list"><span class="tag">Self &amp; Peer-Review Reflection</span><span class="tag">390 words</span></div>
+      <p>For this project, conducting the research wasn't too difficult for me, as I had done a similar task in the Intensive English Program (IEP) in 2023. It mainly involved recalling how to conduct research effectively. However, this time was different because it was my first time completing a research project as a team.</p>
+      <p>We encountered some challenges along the way. For example, we needed to find literature from 2021 to 2026, much of which focused on the COVID-19 pandemic, making it quite difficult to find references relevant to our specific situation. I also improved my citation formatting: previously, I relied on directly copying APA formatting from Google Scholar or manually formatting it in Word, but this time I used professional citation websites like MyBib, which was not only much more convenient but also reduced formatting errors.</p>
+      <p>Through this project, I gained several important personal insights about writing and citations. First, I realized the importance of carefully choosing words and emphasis; for example, I focused on "interests" while a teammate focused on "motivations," which made it easy for me to inadvertently overlap with his points in my writing. Going forward, I must be careful to avoid overlapping with his points to allow more room to develop my own sections. Furthermore, in researching references, I learned to carefully verify that the arguments in the literature are completely consistent with my specific viewpoints.</p>
+      <p>Working with the team made me realize the unique and important contributions each member made to the project. Ker Zhen provided crucial technical and constructive support, helping to build the portfolio website. I personally gained some writing inspiration from his paragraph formatting. Kyal made significant contributions to team planning and quality control; he helped team members create mind maps, brainstorm initial topics, and meticulously checked various details in the work, such as word count. My advice for the future is that we should actively promote teamwork. In future team tasks, we should frequently hold open discussions to ensure smooth communication and efficient work.</p>
+      <p>In conclusion, this research experience helped me identify areas for improvement. Going forward, I will prioritize more in-depth and frequent team discussions to ensure smooth communication at each stage. I will also carefully coordinate research points and references, meticulously check word counts and other relevant regulations, and make full use of reliable tools such as MyBib.</p>
+    </div>
+  </details>
 
   <!-- Member 2 -->
-  <div class="card">
-    <h3>[ Student Name 2 ] <span class="chip pending">Not started</span></h3>
-    <label for="ref2" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--slate);">Self-reflection &amp; peer-review (max 500 words)</label>
-    <textarea id="ref2" class="reflection-box" placeholder="Write this member's self-reflection and peer-review here..." oninput="countWords(this)"></textarea>
-    <p class="word-count">0 / 500 words</p>
-  </div>
+  <details class="card response-card">
+    <summary>
+      <span class="rc-title">Chew Ker Zhen <span class="chip done">Completed</span></span>
+      <span class="rc-arrow">▶</span>
+    </summary>
+    <div class="rc-body">
+      <div class="tag-list"><span class="tag">Self &amp; Peer-Review Reflection</span><span class="tag">508 words</span></div>
+      <p>This research project has helped me understand more about the impact of gamification on students. As I am a student myself, this topic was highly relevant to myself, and has encouraged me to look into the gamified online platforms to make revision and studying more excitingly.</p>
+      <p>The most difficult aspect of my work was reading and comprehending the research papers. There was a lot of terminology that I don't recognize in the academic world, and I was not accustomed to reading long passages that are dense. It takes effort to keep up, to focus and comprehend the long texts and summarizing the main points. Sometimes I read the same paper several times before I got the gist of it. The moment of understanding was very rewarding, especially after I had comprehend the main points of the research papers. It was also really a great accomplishment when the paper was completed as it was tough and exhausting but a great learning experience. Another challenge I face mainly is that I am quite inexperienced in writing academically and made some mistakes like APA referencing format. In the process, I consistently refer to academic writing format online, together with resource provided on elearn, and eventually corrected the mistakes I made and grew more comfortable with the process of academic writing and more comfortable with reading and interpreting research papers, and I believe it improves my ability to deal with difficulties that I initially thought I could not. I also worked on creating the portfolio website. So overall, the most important lesson I learnt is that it is very important to take initiative in learning, and find solutions even if it is difficult and learn in the process.</p>
+      <p>Alex's contributions to teamwork were in the introduction and spark interest section, and he created and checked the references. He is very helpful and friendly throughout the project, always take initiative in sharing his thoughts and inquire about us. Having the opportunity to work with him has taught me the importance of making sure that everyone knows what they have to do when breaking up research tasks. One constructive feedback for Alex is that he could pace himself earlier in the process.</p>
+      <p>Koe was involved with writing the self-regulated learning section and was very kind and responsible, always giving quality work and helping teammates when necessary. She also created the final outline, and composing the final research paper. I learned from Koe is to be organized and take responsibility for my own work on a group project. One constructive piece of advice for Koe would be to provide the drafts a bit earlier so the team can offer feedback earlier.</p>
+      <p>So overall, I believed I gained more proficiency and experience in academic English writing, and also gained useful understanding on the impact of gamifications on student motivation and most importantly, a valuable learning experience. I am sure, In the future, I will be more experienced and take more initiative to use these skills when I write future academic work as a student.</p>
+    </div>
+  </details>
 
   <!-- Member 3 -->
-  <div class="card">
-    <h3>[ Student Name 3 ] <span class="chip pending">Not started</span></h3>
-    <label for="ref3" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--slate);">Self-reflection &amp; peer-review (max 500 words)</label>
-    <textarea id="ref3" class="reflection-box" placeholder="Write this member's self-reflection and peer-review here..." oninput="countWords(this)"></textarea>
-    <p class="word-count">0 / 500 words</p>
-  </div>
+  <details class="card response-card">
+    <summary>
+      <span class="rc-title">Kyal Sinn Ye Htut <span class="chip pending">Not started</span></span>
+      <span class="rc-arrow">▶</span>
+    </summary>
+    <div class="rc-body">
+      <div class="tag-list"><span class="tag">Self &amp; Peer-Review Reflection</span></div>
+      <p>[ Paste this member's self-reflection and peer-review here. ]</p>
+    </div>
+  </details>
 
-  <!-- Member 4 — delete this card if group has only 3 members -->
-  <div class="card">
-    <h3>[ Student Name 4 ] <span class="chip pending">Not started</span></h3>
-    <label for="ref4" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--slate);">Self-reflection &amp; peer-review (max 500 words)</label>
-    <textarea id="ref4" class="reflection-box" placeholder="Write this member's self-reflection and peer-review here..." oninput="countWords(this)"></textarea>
-    <p class="word-count">0 / 500 words</p>
-  </div>
-
-  <a class="btn outline" href="index.html">← Back to Home</a>
+  <a class="btn outline" href="index.html" style="margin-top:1.5rem;display:inline-flex;">← Back to Home</a>
 
 </main>
 <footer class="sitefoot">portfolio / i-reflection.html — ENG 1044 Research Project Course Portfolio</footer>
-<script>
-function countWords(el) {
-  var words = el.value.trim() ? el.value.trim().split(/\s+/).length : 0;
-  var counter = el.nextElementSibling;
-  counter.textContent = words + ' / 500 words';
-  if (words > 500) { counter.classList.add('over'); } else { counter.classList.remove('over'); }
-}
-</script>
 <script src="nav.js"></script>
 </body>
 </html>
